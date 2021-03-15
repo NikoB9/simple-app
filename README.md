@@ -1,29 +1,39 @@
 # SimpleApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+Le projet à été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 11.1.4.
+Ce projet m'a permis d'appréhender les bases d'Angular autour d'une application, simple, de gestion d'articles.
 
-## Development server
+Afin d'y parvenir j'ai suivi le [cours](https://slides.com/orangefire/deck-1-3-5) de Tony Amirault : [https://slides.com/orangefire/deck-1-3-5](https://slides.com/orangefire/deck-1-3-5)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Informations
 
-## Code scaffolding
+Un fichier docker-compose vous permet de pouvoir faire tourner le logiciel dans un environnement de développement sécurisé.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Aide
 
-## Build
+Pour mener à bien ce projet j'ai bénéficier des conseils avisés de `Tony Lim`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Pré-requis
 
-## Running unit tests
+Docker
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+* Téléchargement du dossier git
+```bash
+$ cd chemin/projet/simple-app/
+$ docker-compose build
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* Lancement des conteneurs
+```bash
+$ docker-compose up -d db
+$ docker-compose up -d front
+```
 
-## Further help
+* Lancement de l'application (dans un navigateur)
+`
+http://localhost:4200/
+`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-[course](https://slides.com/orangefire/deck-1-3-5) : [https://slides.com/orangefire/deck-1-3-5](https://slides.com/orangefire/deck-1-3-5)
+## Utilisation
