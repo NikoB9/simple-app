@@ -62,7 +62,7 @@ http://localhost:4200/article/{id}
 ```
 
 Cette page est dédiée à l'article dont l'id est passé en paramètre dans l'url.
-Un bouton de suppression est positionné dans l'article afin de le supprimer de la base. Une fois l'article supprimé il est redirigé vers la liste des articles.
+Un bouton de suppression est positionné dans l'article afin de le supprimer de la base. Une fois l'article supprimé l'utilisateur est redirigé vers la liste des articles.
 
 ### Création d'un article
 
@@ -70,4 +70,4 @@ Un bouton de suppression est positionné dans l'article afin de le supprimer de 
 http://localhost:4200/article/create
 ```
 
-Cette page permet de créer un nouvel article. Une fois créé l'utilisateur est redirigé vers la page de l'article.
+Cette page permet de créer un nouvel article. Une fois l'article créé l'utilisateur est redirigé vers la page de l'article.
