@@ -29,8 +29,8 @@ export class ArticleCreationComponent implements OnInit {
   create(){
     this.route.url.subscribe(urlSegments => {
       console.log(urlSegments);
-      /*Si on est dans la page de création on enregistre et renvoie vers les articles*/
-      if (`${urlSegments[0].path}/${urlSegments[1].path}` === 'article/create'){
+      /*Si on est dans la page de création on enregistre et renvoie vers l'article*/
+      if (`${urlSegments[0]?.path}/${urlSegments[1]?.path}` === 'article/create'){
 
         this.articleService.addArticle(this.articleForm.value).subscribe( (article) => {
           /*console.log(article);*/

@@ -18,6 +18,8 @@ services:
       dockerfile: Dockerfile_back
     networks:
         - simpleapp-network
+    ports:
+      - "3000:3000"
 
 networks:
   simpleapp-network:

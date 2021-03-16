@@ -28,7 +28,7 @@ export class ArticleComponent implements OnInit {
   @Output()
   deleteArticle: EventEmitter<Article> = new EventEmitter<Article>();
 
-  constructor(private route: ActivatedRoute, private articleService: ArticleService) {
+  constructor(private route: ActivatedRoute, private router: Router, private articleService: ArticleService) {
     /*this.title = 'Article';
     this.content = 'Content';
     this.author = 'Nicolas BOURNEUF';
@@ -38,7 +38,26 @@ export class ArticleComponent implements OnInit {
 
   /*on connait déjà l'id, dans l'attibut article de la classe, donc pas besoin de le passer en param*/
   delete(){
-    this.deleteArticle.emit(this.article);
+
+    this.route.url.subscribe(urlSegments => {
+      console.log(urlSegments);
+      /*Si on est dans la page de visu on enregistre et renvoie vers les articles*/
+      if (`${urlSegments[0].path}/` === 'article/') {
+
+        // @ts-ignore
+        this.articleService.deleteArticle(this.article.id).subscribe(() => {
+          this.router.navigate(['/articles']);
+        });
+
+      }
+      /*Si on est dans la page des articles on utilise la fonction définie dans les articles*/
+      else {
+
+        this.deleteArticle.emit(this.article);
+
+      }
+    });
+
   }
 
   ngOnInit(): void {

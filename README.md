@@ -27,9 +27,11 @@ $ docker-compose build
 
 * Lancement des conteneurs
 ```bash
-$ docker-compose up -d db
 $ docker-compose up -d front
+$ docker-compose up -d db
 ```
+
+* /!\ ATTENDRE quelques secondes, le temps que les services se lancent 
 
 * Lancement de l'application (dans un navigateur)
 `
@@ -49,7 +51,7 @@ http://localhost:4200/articles
 ```
 
 A travers cette page il est possible de voir les articles publier ainsi que d'accéder au site de l'auteur en cliquant dessus.
-Cette page poossède un formulaire pour créer un nouvel article.
+Cette page possède un formulaire pour créer un nouvel article.
 Un bouton de suppression est positionner dans chaque article afin de le supprimer de la base.
 En cliquant sur le titre d'un article nous sommes redirigés vers une page dédiée à l'article.
 
