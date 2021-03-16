@@ -50,10 +50,10 @@ http://localhost:4200/
 http://localhost:4200/articles
 ```
 
-A travers cette page il est possible de voir les articles publier ainsi que d'accéder au site de l'auteur en cliquant dessus.
+A travers cette page il est possible de voir les articles publiés ainsi que d'accéder au site de l'auteur en cliquant dessus.
 Cette page possède un formulaire pour créer un nouvel article.
-Un bouton de suppression est positionner dans chaque article afin de le supprimer de la base.
-En cliquant sur le titre d'un article nous sommes redirigés vers une page dédiée à l'article.
+Un bouton de suppression est positionné dans chaque article afin de le supprimer de la base. L'événement est déclenché depuis la page de l'article vers cette page de liste qui va s'occuper de supprimer l'article au travers d'un service.
+En cliquant sur le titre d'un article nous sommes redirigé vers une page dédiée à l'article. L'événement est déclenché depuis la page de création d'article vers cette page de liste qui va s'occuper d'ajouter l'article au travers d'un service.
 
 ### Lecture d'un article
 
@@ -61,7 +61,8 @@ En cliquant sur le titre d'un article nous sommes redirigés vers une page dédi
 http://localhost:4200/article/{id}
 ```
 
-Cette page est dédiée à l'article dont l'id est placé en paramètre dans l'url.
+Cette page est dédiée à l'article dont l'id est passé en paramètre dans l'url.
+Un bouton de suppression est positionné dans l'article afin de le supprimer de la base. Une fois l'article supprimé il est redirigé vers la liste des articles.
 
 ### Création d'un article
 
